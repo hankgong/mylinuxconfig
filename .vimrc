@@ -28,9 +28,19 @@ vnoremap <C-S>		<C-C>:update<CR>
 inoremap <C-S>		<C-O>:update<CR>
 
 "CTRL-W is close current buffer
-noremap <A-q>		:close<CR>
-vnoremap <A-q>		<C-C>:close<CR>
-inoremap <A-q>		<C-O>:close<CR>
+noremap <A-q>		:q!<CR>
+vnoremap <A-q>		<C-C>:q!<CR>
+inoremap <A-q>		<C-O>:q!<CR>
+
+"f3 is close current buffer
+noremap <f3>		:bd<CR>
+vnoremap <f3>		<C-C>:bd<CR>
+inoremap <f3>		<C-O>:bd<CR>
+
+"f2 is close current buffer
+noremap <f2>		:w<CR>
+vnoremap <f2>		<C-C>:w<CR>
+inoremap <f2>		<C-O>:w<CR>
 
 " CTRL-F4 is Close window
 noremap <C-F4> <C-W>c
