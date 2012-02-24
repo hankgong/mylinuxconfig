@@ -1,0 +1,535 @@
+;; Object motortest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "motortest/"
+  :tables (list 
+   (semanticdb-table "main.cpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "main.cpp"
+    :pointmax 31002
+    :fsize 30967
+    :lastmodtime '(20271 27209)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ADXL345.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("arduinolib/WProgram.h" include nil nil [1080 1112])
+            ("ADXL345.h" include nil nil [1113 1133])
+            ("arduinolib/Wire.h" include nil nil [1134 1162])
+            ("DEVICE" variable (:constant-flag t) nil [1172 1178])
+            ("TO_READ" variable (:constant-flag t) nil [1223 1230])
+            ("ADXL345" function
+               (:constructor-flag t
+                :parent "ADXL345"
+                :type ("ADXL345" type (:type "class") nil nil))
+                nil [1314 1468])
+            ("powerOn" function
+               (:parent "ADXL345"
+                :type "void")
+                nil [1470 1700])
+            ("readAccel" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("xyz" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1783 1792]))                  
+                :type "void")
+                nil [1759 1831])
+            ("readAccel" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1856 1863])
+                    ("y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1864 1871])
+                    ("z" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1872 1879]))                  
+                :type "void")
+                nil [1832 2250])
+            ("get_Gxyz" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("xyz" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2275 2287]))                  
+                :type "void")
+                nil [2252 2401])
+            ("writeTo" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("address" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2470 2483])
+                    ("val" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2484 2493]))                  
+                :type "void")
+                nil [2448 2734])
+            ("readFrom" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("address" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2837 2850])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [2851 2859])
+                    ("_buff" variable
+                       (:dereference 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2860 2873]))                  
+                :type "void")
+                nil [2814 3503])
+            ("getRangeSetting" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("rangeSetting" variable
+                       (:pointer 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3620 3639]))                  
+                :type "void")
+                nil [3590 3729])
+            ("setRangeSetting" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [3821 3829]))                  
+                :type "void")
+                nil [3791 4188])
+            ("getSelfTestBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [4228 4311])
+            ("setSelfTestBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("selfTestBit" variable (:type "bool") (reparse-symbol arg-sub-list) [4508 4525]))                  
+                :type "void")
+                nil [4479 4584])
+            ("getSpiBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [4619 4697])
+            ("setSpiBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("spiBit" variable (:type "bool") (reparse-symbol arg-sub-list) [4845 4857]))                  
+                :type "void")
+                nil [4821 4911])
+            ("getInterruptLevelBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [4953 5042])
+            ("setInterruptLevelBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptLevelBit" variable (:type "bool") (reparse-symbol arg-sub-list) [5205 5228]))                  
+                :type "void")
+                nil [5170 5293])
+            ("getFullResBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [5333 5415])
+            ("setFullResBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("fullResBit" variable (:type "bool") (reparse-symbol arg-sub-list) [5758 5774]))                  
+                :type "void")
+                nil [5730 5832])
+            ("getJustifyBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [5871 5953])
+            ("setJustifyBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("justifyBit" variable (:type "bool") (reparse-symbol arg-sub-list) [6120 6136]))                  
+                :type "void")
+                nil [6092 6194])
+            ("setTapThreshold" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("tapThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [6380 6397]))                  
+                :type "void")
+                nil [6350 6518])
+            ("getTapThreshold" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [6636 6742])
+            ("setAxisGains" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("_gains" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6819 6834]))                  
+                :type "void")
+                nil [6792 6902])
+            ("getAxisGains" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("_gains" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [6930 6945]))                  
+                :type "void")
+                nil [6903 7013])
+            ("setAxisOffset" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [7250 7256])
+                    ("y" variable (:type "int") (reparse-symbol arg-sub-list) [7257 7263])
+                    ("z" variable (:type "int") (reparse-symbol arg-sub-list) [7264 7270]))                  
+                :type "void")
+                nil [7222 7385])
+            ("getAxisOffset" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7453 7460])
+                    ("y" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7461 7468])
+                    ("z" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7469 7475]))                  
+                :type "void")
+                nil [7425 7649])
+            ("setTapDuration" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("tapDuration" variable (:type "int") (reparse-symbol arg-sub-list) [7963 7979]))                  
+                :type "void")
+                nil [7934 8090])
+            ("getTapDuration" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [8113 8211])
+            ("setDoubleTapLatency" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("doubleTapLatency" variable (:type "int") (reparse-symbol arg-sub-list) [8595 8616]))                  
+                :type "void")
+                nil [8561 8690])
+            ("getDoubleTapLatency" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [8717 8823])
+            ("setDoubleTapWindow" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("doubleTapWindow" variable (:type "int") (reparse-symbol arg-sub-list) [9173 9193]))                  
+                :type "void")
+                nil [9140 9319])
+            ("getDoubleTapWindow" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [9349 9454])
+            ("setActivityThreshold" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("activityThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [9883 9905]))                  
+                :type "void")
+                nil [9848 10041])
+            ("getActivityThreshold" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [10071 10182])
+            ("setInactivityThreshold" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("inactivityThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [10623 10647]))                  
+                :type "void")
+                nil [10586 10791])
+            ("getInactivityThreshold" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [10823 10938])
+            ("setTimeInactivity" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("timeInactivity" variable (:type "int") (reparse-symbol arg-sub-list) [11258 11277]))                  
+                :type "void")
+                nil [11226 11404])
+            ("getTimeInactivity" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [11438 11546])
+            ("setFreeFallThreshold" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("freeFallThreshold" variable (:type "int") (reparse-symbol arg-sub-list) [11996 12018]))                  
+                :type "void")
+                nil [11961 12153])
+            ("getFreeFallThreshold" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [12187 12297])
+            ("setFreeFallDuration" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("freeFallDuration" variable (:type "int") (reparse-symbol arg-sub-list) [12674 12695]))                  
+                :type "void")
+                nil [12640 12827])
+            ("getFreeFallDuration" function
+               (:parent "ADXL345"
+                :type "int")
+                nil [12859 12966])
+            ("isActivityXEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [12968 13060])
+            ("isActivityYEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [13061 13153])
+            ("isActivityZEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [13154 13246])
+            ("isInactivityXEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [13247 13341])
+            ("isInactivityYEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [13342 13436])
+            ("isInactivityZEnabled" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [13437 13531])
+            ("setActivityX" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [13560 13571]))                  
+                :type "void")
+                nil [13533 13629])
+            ("setActivityY" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [13657 13668]))                  
+                :type "void")
+                nil [13630 13726])
+            ("setActivityZ" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [13754 13765]))                  
+                :type "void")
+                nil [13727 13823])
+            ("setInactivityX" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [13853 13864]))                  
+                :type "void")
+                nil [13824 13922])
+            ("setInactivityY" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [13952 13963]))                  
+                :type "void")
+                nil [13923 14021])
+            ("setInactivityZ" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14051 14062]))                  
+                :type "void")
+                nil [14022 14120])
+            ("isActivityAc" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [14122 14207])
+            ("isInactivityAc" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [14208 14294])
+            ("setActivityAc" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14324 14335]))                  
+                :type "void")
+                nil [14296 14393])
+            ("setInactivityAc" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14424 14435]))                  
+                :type "void")
+                nil [14394 14493])
+            ("getSuppressBit" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [14495 14576])
+            ("setSuppressBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14606 14617]))                  
+                :type "void")
+                nil [14577 14670])
+            ("isTapDetectionOnX" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [14672 14756])
+            ("setTapDetectionOnX" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14790 14801]))                  
+                :type "void")
+                nil [14757 14854])
+            ("isTapDetectionOnY" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [14855 14939])
+            ("setTapDetectionOnY" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [14973 14984]))                  
+                :type "void")
+                nil [14940 15037])
+            ("isTapDetectionOnZ" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15038 15122])
+            ("setTapDetectionOnZ" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [15156 15167]))                  
+                :type "void")
+                nil [15123 15220])
+            ("isActivitySourceOnX" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15222 15314])
+            ("isActivitySourceOnY" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15315 15407])
+            ("isActivitySourceOnZ" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15408 15500])
+            ("isTapSourceOnX" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15502 15589])
+            ("isTapSourceOnY" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15590 15677])
+            ("isTapSourceOnZ" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15678 15765])
+            ("isAsleep" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15767 15848])
+            ("isLowPower" function
+               (:parent "ADXL345"
+                :type "bool")
+                nil [15850 15926])
+            ("setLowPower" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [15953 15964]))                  
+                :type "void")
+                nil [15927 16016])
+            ("getRate" function
+               (:parent "ADXL345"
+                :type "double")
+                nil [16018 16152])
+            ("setRate" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("rate" variable (:type "double") (reparse-symbol arg-sub-list) [16176 16188]))                  
+                :type "void")
+                nil [16154 16422])
+            ("set_bw" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("bw_code" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16445 16458]))                  
+                :type "void")
+                nil [16424 16633])
+            ("get_bw_code" function
+               (:parent "ADXL345"
+                :type ("byte" type (:type "class") nil nil))
+                nil [16635 16741])
+            ("getInterruptSource" function
+               (:parent "ADXL345"
+                :type ("byte" type (:type "class") nil nil))
+                nil [16743 16845])
+            ("getInterruptSource" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptBit" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16880 16898]))                  
+                :type "bool")
+                nil [16847 16960])
+            ("getInterruptMapping" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptBit" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16996 17014]))                  
+                :type "bool")
+                nil [16962 17073])
+            ("setInterruptMapping" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptBit" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17233 17251])
+                    ("interruptPin" variable (:type "bool") (reparse-symbol arg-sub-list) [17252 17270]))                  
+                :type "void")
+                nil [17199 17337])
+            ("isInterruptEnabled" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptBit" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17372 17390]))                  
+                :type "bool")
+                nil [17339 17452])
+            ("setInterrupt" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("interruptBit" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17481 17499])
+                    ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [17500 17511]))                  
+                :type "void")
+                nil [17454 17574])
+            ("setRegisterBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("regAdress" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17605 17620])
+                    ("bitPos" variable (:type "int") (reparse-symbol arg-sub-list) [17621 17632])
+                    ("state" variable (:type "bool") (reparse-symbol arg-sub-list) [17633 17644]))                  
+                :type "void")
+                nil [17576 17925])
+            ("getRegisterBit" function
+               (:parent "ADXL345"
+                :arguments 
+                  ( ("regAdress" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17956 17971])
+                    ("bitPos" variable (:type "int") (reparse-symbol arg-sub-list) [17972 17983]))                  
+                :type "bool")
+                nil [17927 18060])
+            ("printAllRegister" function
+               (:parent "ADXL345"
+                :type "void")
+                nil [18223 18554])
+            ("print_byte" function
+               (:arguments 
+                  ( ("val" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18572 18581]))                  
+                :type "void")
+                nil [18556 18682]))          
+    :file "ADXL345.cpp"
+    :pointmax 18683
+    :fsize 18683
+    :lastmodtime '(20267 17168)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DEVICE" . ((semantic-list "(0x53)" 1179 . 1185)))
+          ("TO_READ" . ((semantic-list "(6)" 1231 . 1234)))
+          )
+
+    )
+   )
+  :file "!home!hankgong!projects!roboticlegv1!motortest!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

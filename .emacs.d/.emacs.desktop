@@ -1,0 +1,51 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Feb  6 02:33:55 2012
+;; Desktop file format version 206
+;; Emacs version 23.2.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("imenu" "cedet" "f4" "<f4>"))
+(setq regexp-search-ring '("dfdf"))
+(setq register-alist '((48 . "    if (condition){\n    }\n\n    if(x==1){\n        dfdfd;\n")))
+(setq file-name-history '("/home/hankgong/.emacs.d/cedet-1.0.1/cedet-build.el" "~/" "/home/hankgong/projects/roboticlegv1/arduinolib/Wire.cpp" "/home/hankgong/projects/roboticlegv1/arduinolib/Tone.cpp" "/home/hankgong/.emacs" "/home/hankgong/projects/roboticlegv1/motortest/main.cpp" "/home/hankgong/projects/roboticlegv1/CMakeLists.txt"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/hankgong/projects/roboticlegv1/motortest/main.cpp"
+  "main.cpp"
+  'c++-mode
+  '(abbrev-mode linum-mode ergoemacs-mode xmsi-mode yas/minor-mode auto-complete-mode)
+  26182
+  '(26127 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/hankgong/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(linum-mode ergoemacs-mode xmsi-mode yas/minor-mode auto-complete-mode)
+  5450
+  '(4927 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/usr/lib/avr/include/avr/delay.h"
+  "delay.h"
+  'c-mode
+  '(abbrev-mode linum-mode ergoemacs-mode xmsi-mode yas/minor-mode auto-complete-mode)
+  1665
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+

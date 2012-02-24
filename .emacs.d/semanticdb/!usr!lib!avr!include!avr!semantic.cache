@@ -1,0 +1,24 @@
+;; Object avr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "avr/"
+  :tables (list 
+   (semanticdb-table "delay.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_AVR_DELAY_H_" variable (:constant-flag t) nil [1649 1662])
+            ("util/delay.h" include (:system-flag t) nil [1719 1742]))          
+    :file "delay.h"
+    :pointmax 1771
+    :fsize 1770
+    :lastmodtime '(19555 22634)
+    :unmatched-syntax '((string 1673 . 1718) (symbol 1665 . 1672) (punctuation 1664 . 1665))
+    :lexical-table 
+        '(("_AVR_DELAY_H_")
+          )
+
+    )
+   )
+  :file "!usr!lib!avr!include!avr!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

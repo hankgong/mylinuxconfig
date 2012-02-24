@@ -1,0 +1,44 @@
+rm -rf ack.vim
+git clone https://github.com/mileszs/ack.vim.git
+rm -rf ack.vim/.git
+rm ack.vim/.gitignore
+
+rm -rf ctrlp.vim
+git clone https://github.com/kien/ctrlp.vim.git
+rm -rf ctrlp.vim/.git
+rm ctrlp.vim/.gitignore
+
+rm -rf minibufexpl.vim
+git clone https://github.com/fholgado/minibufexpl.vim.git
+rm -rf minibufexpl.vim/.git
+rm minibufexpl.vim/.gitignore
+
+rm -rf nerdcommenter
+git clone https://github.com/scrooloose/nerdcommenter.git
+rm -rf nerdcommenter/.git
+rm nerdcommenter/.gitignore
+
+rm -rf snipmate.vim
+git clone https://github.com/msanders/snipmate.vim.git
+rm -rf snipmate.vim/.git
+rm snipmate.vim/.gitignore
+
+rm -rf supertab
+git clone https://github.com/ervandew/supertab.git
+rm -rf supertab/.git
+rm supertab/.gitignore
+
+rm -rf tagbar
+git clone https://github.com/majutsushi/tagbar.git
+rm -rf tagbar/.git
+rm tagbar/.gitignore
+
+rm -rf vim-fugitive
+git clone https://github.com/tpope/vim-fugitive.git
+rm -rf vim-fugitive/.git
+rm vim-fugitive/.gitignore
+
+rm -rf vim-repeat
+git clone https://github.com/tpope/vim-repeat.git
+rm -rf vim-repeat/.git
+rm vim-repeat/.gitignore

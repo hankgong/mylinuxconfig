@@ -1,0 +1,509 @@
+;; Object arduinolib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "arduinolib/"
+  :tables (list 
+   (semanticdb-table "Wire.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("twi.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [926 944])
+            ("inttypes.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [902 925])
+            ("string.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [880 901])
+            ("stdlib.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [858 879])
+            ("C" extern (:members 
+              ( ("stdlib.h" include
+                   (:typemodifiers ("extern" "\"C\"")
+                    :system-flag t)
+                    (reparse-symbol extern-c-contents) [858 879])
+                ("string.h" include
+                   (:typemodifiers ("extern" "\"C\"")
+                    :system-flag t)
+                    (reparse-symbol extern-c-contents) [880 901])
+                ("inttypes.h" include
+                   (:typemodifiers ("extern" "\"C\"")
+                    :system-flag t)
+                    (reparse-symbol extern-c-contents) [902 925])
+                ("twi.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [926 944]))              ) nil [845 946])
+            ("Wire.h" include nil nil [948 965])
+            ("TwoWire::rxBuffer" variable
+               (:dereference 1
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1049 1090])
+            ("TwoWire::rxBufferIndex" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1091 1126])
+            ("TwoWire::rxBufferLength" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1127 1163])
+            ("TwoWire::txAddress" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1165 1196])
+            ("TwoWire::txBuffer" variable
+               (:dereference 1
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1197 1238])
+            ("TwoWire::txBufferIndex" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1239 1274])
+            ("TwoWire::txBufferLength" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1275 1311])
+            ("TwoWire::transmitting" variable
+               (:default-value "0"
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1313 1347])
+            ("TwoWire" function
+               (:constructor-flag t
+                :parent "TwoWire"
+                :type ("TwoWire" type (:type "class") nil nil))
+                nil [1508 1530])
+            ("begin" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1634 1639]))                  
+                :type "void")
+                nil [1614 1745])
+            ("begin" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1767 1783]))                  
+                :type "void")
+                nil [1747 1913])
+            ("begin" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type "int") (reparse-symbol arg-sub-list) [1935 1947]))                  
+                :type "void")
+                nil [1915 1978])
+            ("requestFrom" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2009 2025])
+                    ("quantity" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2026 2043]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1980 2335])
+            ("requestFrom" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type "int") (reparse-symbol arg-sub-list) [2366 2378])
+                    ("quantity" variable (:type "int") (reparse-symbol arg-sub-list) [2379 2392]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2337 2455])
+            ("beginTransmission" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2489 2505]))                  
+                :type "void")
+                nil [2457 2704])
+            ("beginTransmission" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("address" variable (:type "int") (reparse-symbol arg-sub-list) [2738 2750]))                  
+                :type "void")
+                nil [2706 2793])
+            ("endTransmission" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2828 2833]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2795 3093])
+            ("send" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("data" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3202 3215]))                  
+                :type "void")
+                nil [3183 3614])
+            ("send" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3723 3737])
+                    ("quantity" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3738 3755]))                  
+                :type "void")
+                nil [3704 3975])
+            ("send" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4084 4095]))                  
+                :type "void")
+                nil [4065 4137])
+            ("send" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("data" variable (:type "int") (reparse-symbol arg-sub-list) [4246 4255]))                  
+                :type "void")
+                nil [4227 4282])
+            ("available" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4403 4408]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4376 4453])
+            ("receive" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4572 4577]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [4547 4844])
+            ("onReceiveService" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("inBytes" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4944 4961])
+                    ("numBytes" variable (:type "int") (reparse-symbol arg-sub-list) [4962 4975]))                  
+                :type "void")
+                nil [4913 5640])
+            ("onRequestService" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5741 5746]))                  
+                :type "void")
+                nil [5710 6031])
+            ("onReceive" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6097 6113]))                  
+                :type "void")
+                nil [6072 6153])
+            ("onRequest" function
+               (:parent "TwoWire"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6218 6234]))                  
+                :type "void")
+                nil [6193 6275])
+            ("Wire" variable
+               (:default-value "TwoWire()"
+                :type ("TwoWire" type (:type "class") nil nil))
+                nil [6359 6384]))          
+    :file "Wire.cpp"
+    :pointmax 6386
+    :fsize 6385
+    :lastmodtime '(20265 64952)
+    :unmatched-syntax '((semantic-list 6234 . 6240) (semantic-list 6223 . 6234) (semantic-list 6113 . 6118) (semantic-list 6102 . 6113) (punctuation 1423 . 1424) (semantic-list 1418 . 1423) (semantic-list 1392 . 1418) (VOID 1387 . 1391) (punctuation 1385 . 1386) (semantic-list 1379 . 1385) (semantic-list 1353 . 1379) (VOID 1348 . 1352))
+    )
+   (semanticdb-table "twi.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("twi_h" variable (:constant-flag t) nil [861 866])
+            ("inttypes.h" include (:system-flag t) nil [868 891])
+            ("CPU_FREQ" variable (:constant-flag t) nil [943 951])
+            ("TWI_FREQ" variable (:constant-flag t) nil [1001 1009])
+            ("TWI_BUFFER_LENGTH" variable (:constant-flag t) nil [1066 1083])
+            ("TWI_READY" variable (:constant-flag t) nil [1107 1116])
+            ("TWI_MRX" variable (:constant-flag t) nil [1129 1136])
+            ("TWI_MTX" variable (:constant-flag t) nil [1151 1158])
+            ("TWI_SRX" variable (:constant-flag t) nil [1173 1180])
+            ("TWI_STX" variable (:constant-flag t) nil [1195 1202])
+            ("twi_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1226 1231]))                  
+                :type "void")
+                nil [1212 1232])
+            ("twi_setAddress" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1255 1263]))                  
+                :type "void")
+                nil [1235 1264])
+            ("twi_readFrom" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1288 1296])
+                    ("" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1297 1306])
+                    ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1307 1315]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1267 1316])
+            ("twi_writeTo" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1339 1347])
+                    ("" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1348 1357])
+                    ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1358 1366])
+                    ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1367 1375]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1319 1376])
+            ("twi_transmit" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1400 1409])
+                    ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1410 1418]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1379 1419])
+            ("twi_attachSlaveRxEvent" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1451 1459]))                  
+                :type "void")
+                nil [1422 1477])
+            ("twi_attachSlaveTxEvent" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1509 1517]))                  
+                :type "void")
+                nil [1480 1526])
+            ("twi_reply" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1544 1552]))                  
+                :type "void")
+                nil [1529 1553])
+            ("twi_stop" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1570 1575]))                  
+                :type "void")
+                nil [1556 1576])
+            ("twi_releaseBus" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1599 1604]))                  
+                :type "void")
+                nil [1579 1605]))          
+    :file "twi.h"
+    :pointmax 1615
+    :fsize 1614
+    :lastmodtime '(20265 64952)
+    :unmatched-syntax '((semantic-list 1517 . 1523) (semantic-list 1514 . 1517) (semantic-list 1459 . 1474) (semantic-list 1456 . 1459))
+    :lexical-table 
+        '(("TWI_SRX" . ((number "3" 1183 . 1184)))
+          ("TWI_FREQ" . ((number "100000L" 1010 . 1017)))
+          ("TWI_STX" . ((number "4" 1205 . 1206)))
+          ("TWI_READY" . ((number "0" 1117 . 1118)))
+          ("CPU_FREQ" . ((number "16000000L" 952 . 961)))
+          ("TWI_MRX" . ((number "1" 1139 . 1140)))
+          ("twi_h")
+          ("TWI_MTX" . ((number "2" 1161 . 1162)))
+          ("TWI_BUFFER_LENGTH" . ((number "32" 1084 . 1086)))
+          )
+
+    )
+   (semanticdb-table "Wire.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TwoWire_h" variable (:constant-flag t) nil [869 878])
+            ("inttypes.h" include (:system-flag t) nil [880 901])
+            ("BUFFER_LENGTH" variable (:constant-flag t) nil [911 924])
+            ("TwoWire" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [947 955])
+                    ("rxBuffer" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [960 986])
+                    ("rxBufferIndex" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [991 1020])
+                    ("rxBufferLength" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1025 1055])
+                    ("txAddress" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1061 1086])
+                    ("txBuffer" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1091 1117])
+                    ("txBufferIndex" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1122 1151])
+                    ("txBufferLength" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1156 1186])
+                    ("transmitting" variable
+                       (:typemodifiers ("static")
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1192 1220])
+                    ("user_onRequest" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1225 1261])
+                    ("user_onReceive" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1266 1301])
+                    ("onRequestService" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1335 1340]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1306 1341])
+                    ("onReceiveService" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1375 1384])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1385 1389]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1346 1390])
+                    ("public" label nil (reparse-symbol classsubparts) [1393 1400])
+                    ("TwoWire" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TwoWire" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1405 1415])
+                    ("begin" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1420 1433])
+                    ("begin" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1449 1457]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1438 1458])
+                    ("begin" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1474 1478]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1463 1479])
+                    ("beginTransmission" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1507 1515]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1484 1516])
+                    ("beginTransmission" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1544 1548]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1521 1549])
+                    ("endTransmission" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1578 1583]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1554 1584])
+                    ("requestFrom" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1609 1617])
+                            ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1618 1626]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1589 1627])
+                    ("requestFrom" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1652 1656])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [1657 1661]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1632 1662])
+                    ("send" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1677 1685]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1667 1686])
+                    ("send" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("uint8_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1701 1710])
+                            ("" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1711 1719]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1691 1720])
+                    ("send" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [1735 1739]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1725 1740])
+                    ("send" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1755 1761]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1745 1762])
+                    ("available" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1785 1790]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1767 1791])
+                    ("receive" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1812 1817]))                          
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1796 1818])
+                    ("onReceive" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1839 1847]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1823 1855])
+                    ("onRequest" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1876 1884]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1860 1893]))                  
+                :type "class")
+                nil [929 1896])
+            ("Wire" variable
+               (:typemodifiers ("extern")
+                :type ("TwoWire" type (:type "class") nil nil))
+                nil [1898 1918]))          
+    :file "Wire.h"
+    :pointmax 1928
+    :fsize 1927
+    :lastmodtime '(20265 64952)
+    :unmatched-syntax '((semantic-list 1884 . 1890) (semantic-list 1881 . 1884) (semantic-list 1847 . 1852) (semantic-list 1844 . 1847))
+    :lexical-table 
+        '(("TwoWire_h")
+          ("BUFFER_LENGTH" . ((number "32" 925 . 927)))
+          )
+
+    )
+   )
+  :file "!home!hankgong!projects!roboticlegv1!arduinolib!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )
