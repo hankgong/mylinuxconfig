@@ -149,6 +149,9 @@ nnoremap <silent> <C-\> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 inoremap <silent> <C-\> <C-O>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> 
 vnoremap <silent> <C-\> <C-C>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> 
 
+" CPP library
+set tags+=~/Programs/library/cpp
+
 " compile current project
 nnoremap <silent> <f5> :cd ../build<CR>:make<CR> 
 inoremap <silent> <f5> <ESC>:cd ../build<CR>:make<CR>a

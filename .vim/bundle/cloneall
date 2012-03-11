@@ -8,11 +8,6 @@ git clone https://github.com/kien/ctrlp.vim.git
 rm -rf ctrlp.vim/.git
 rm ctrlp.vim/.gitignore
 
-rm -rf minibufexpl.vim
-git clone https://github.com/fholgado/minibufexpl.vim.git
-rm -rf minibufexpl.vim/.git
-rm minibufexpl.vim/.gitignore
-
 rm -rf nerdcommenter
 git clone https://github.com/scrooloose/nerdcommenter.git
 rm -rf nerdcommenter/.git
