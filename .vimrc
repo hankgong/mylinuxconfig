@@ -102,6 +102,7 @@ filetype plugin on
 syntax on
 syntax enable
 
+set nocompatible
 set nu
 set autoread		"autoload the file when modified
 set nobackup	
