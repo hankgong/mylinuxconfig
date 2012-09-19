@@ -18,6 +18,17 @@ noremap k j
 noremap j h
 noremap h i
 
+"enable the alt key mapping in normal terminal found this at 
+"http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim"
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
+
 
 "Enable windows copy/cut/paste and selection
 "source $VIMRUNTIME/mswin.vim
@@ -28,9 +39,14 @@ vnoremap <C-S>		<C-C>:update<CR>
 inoremap <C-S>		<C-O>:update<CR>
 
 "CTRL-W is close current buffer
-noremap <A-q>		:q!<CR>
-vnoremap <A-q>		<C-C>:q!<CR>
-inoremap <A-q>		<C-O>:q!<CR>
+noremap <C-w>		:bd<CR>
+vnoremap <C-w>		<C-C>:bd<CR>
+inoremap <C-w>		<C-O>:bd<CR>
+
+noremap <C-q>		:q!<CR>
+vnoremap <C-q>		<C-C>:q!<CR>
+inoremap <C-q>		<C-O>:q!<CR>
+
 
 "f3 is close current buffer
 noremap <f3>		:bd<CR>
@@ -60,6 +76,11 @@ inoremap <C-Y> <C-O><C-R>
 noremap <C-V>		"+gP
 inoremap <C-V>		<C-O>"+gp
 vnoremap <C-V>		"+gp
+
+" CTRL-V and SHIFT-Insert are Paste
+noremap <C-C>		"+y
+inoremap <C-C>		<C-O>"+y
+vnoremap <C-C>		"+y
 
 " CTRL-A is Select all
 noremap <C-A> gggH<C-O>G
@@ -132,11 +153,21 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set autoindent		"inherit the indent of previous line
 set smartindent	
 set cindent			"use c-style indent
+
+set expandtab
+set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
 set showmode
 set confirm			"prompt message when processing unsaved or readonly file
+
+"turn off backup
+set nobackup
+set nowb
+set noswapfile
+
 
 "minibuffer handling
 let g:miniBufExplMapCTabSwitchBufs = 1
@@ -161,6 +192,9 @@ vnoremap <silent> <f5> <C-C>:cd ../build<CR>:make<CR>
 
 autocmd! bufwritepost .vimrc source %
 
+" with highlight current line in different modes
+autocmd InsertEnter,InsertLeave * set cul!
+
 "Error handling
 nnoremap <silent> <A-DOWN> :cn<CR>
 inoremap <silent> <A-DOWN> <C-O>:cn<CR>
@@ -178,8 +212,27 @@ inoremap <silent> <A-l> <RIGHT>
 nnoremap <silent> <A-l> <RIGHT>
 
 "map end of line, beginning of line
-nnoremap <silent> <C-j> 0 
+nnoremap <silent> <C-j> 0
+inoremap <silent> <C-j> <C-\><C-O>0
+vnoremap <silent> <C-j> 0
+
+" delete current line
+nnoremap <silent> <C-d> dd
+inoremap <silent> <C-d> <C-\><C-O>dd
+vnoremap <silent> <C-d> dd
+
 nnoremap <silent> <C-l> $
+inoremap <silent> <C-l> <C-\><C-O>$
+vnoremap <silent> <C-l> $
+
+"customized page up and down
+nnoremap <silent> <C-I> <C-U><C-U>
+vnoremap <silent> <C-I> <C-U><C-U>
+inoremap <silent> <C-I> <C-\><C-O><C-U><C-\><C-O><C-U>
+
+nnoremap <silent> <C-K> <C-D><C-D>
+vnoremap <silent> <C-K> <C-D><C-D>
+inoremap <silent> <C-K> <C-\><C-O><C-D><C-\><C-O><C-D>
 
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_open_multi = '1t'
