@@ -1,112 +1,83 @@
-" Start to use pathogen plugin
+"Manage Vim 'runtimepath' with ease. Much easier to install plugins and
+"runtime files in their own private directories
+"Start to use pathogen plugin
 call pathogen#infect()
 set hidden
 
+
+"Font setting
 set gfn=Monospace\ 9
 "autocmd BufEnter * :syntax sync fromstart
+
 
 "Ctags configuration
 set tags=tags;
 set autochdir
 
+"indent setting
+set autoindent		"inherit the indent of previous line
+set smartindent	
+set cindent			"use c-style indent
+
+set expandtab
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set showmode
+set confirm			"prompt message when processing unsaved or readonly file
+
+"turn off backup
+set nobackup
+set nowb
+set noswapfile
+
 "Set the tagbar width
 let g:tagbar_width = 22
 
-"remap HJKL
+"Settings and bindings for CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so     " Linux/MacOSX
+
+"remap HJKL to make it more intuitively
 noremap i k
 noremap k j
 noremap j h
 noremap h i
 
-"enable the alt key mapping in normal terminal found this at 
-"http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim"
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+" Map alt+ikjl as up/down/left/right for insert and normal mode
+inoremap <silent> <A-i> <UP>
+nnoremap <silent> <A-i> <UP>
+inoremap <silent> <A-k> <DOWN>
+nnoremap <silent> <A-k> <DOWN>
+inoremap <silent> <A-j> <LEFT>
+nnoremap <silent> <A-j> <LEFT>
+inoremap <silent> <A-l> <RIGHT>
+nnoremap <silent> <A-l> <RIGHT>
 
-set timeout ttimeoutlen=50
+"map end of line, beginning of line
+nnoremap <silent> <C-j> 0
+inoremap <silent> <C-j> <C-\><C-O>0
+vnoremap <silent> <C-j> 0
 
+" delete current line
+nnoremap <silent> <C-d> dd
+inoremap <silent> <C-d> <C-\><C-O>dd
+vnoremap <silent> <C-d> dd
 
-"Enable windows copy/cut/paste and selection
-"source $VIMRUNTIME/mswin.vim
-"behave mswin
-" Use CTRL-S for saving, also in Insert mode
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<C-O>:update<CR>
+nnoremap <silent> <C-l> $
+inoremap <silent> <C-l> <C-\><C-O>$
+vnoremap <silent> <C-l> $
 
-"CTRL-W is close current buffer
-noremap <C-w>		:bd<CR>
-vnoremap <C-w>		<C-C>:bd<CR>
-inoremap <C-w>		<C-O>:bd<CR>
+"customized page up and down
+nnoremap <silent> <C-I> <C-U><C-U>
+vnoremap <silent> <C-I> <C-U><C-U>
+inoremap <silent> <C-I> <C-\><C-O><C-U><C-\><C-O><C-U>
 
-noremap <C-q>		:q!<CR>
-vnoremap <C-q>		<C-C>:q!<CR>
-inoremap <C-q>		<C-O>:q!<CR>
+nnoremap <silent> <C-K> <C-D><C-D>
+vnoremap <silent> <C-K> <C-D><C-D>
+inoremap <silent> <C-K> <C-\><C-O><C-D><C-\><C-O><C-D>
 
-
-"f3 is close current buffer
-noremap <f3>		:bd<CR>
-vnoremap <f3>		<C-C>:bd<CR>
-inoremap <f3>		<C-O>:bd<CR>
-
-"f2 is close current buffer
-noremap <f2>		:w<CR>
-vnoremap <f2>		<C-C>:w<CR>
-inoremap <f2>		<C-O>:w<CR>
-
-" CTRL-F4 is Close window
-noremap <C-F4> <C-W>c
-inoremap <C-F4> <C-O><C-W>c
-cnoremap <C-F4> <C-C><C-W>c
-onoremap <C-F4> <C-C><C-W>c
-
-" CTRL-Z is Undo; not in cmdline though
-noremap <C-Z> u
-inoremap <C-Z> <C-O>u
-
-" CTRL-Y is Redo (although not repeat); not in cmdline though
-noremap <C-Y> <C-R>
-inoremap <C-Y> <C-O><C-R>
-
-" CTRL-V and SHIFT-Insert are Paste
-noremap <C-V>		"+gP
-inoremap <C-V>		<C-O>"+gp
-vnoremap <C-V>		"+gp
-
-" CTRL-V and SHIFT-Insert are Paste
-noremap <C-C>		"+y
-inoremap <C-C>		<C-O>"+y
-vnoremap <C-C>		"+y
-
-" CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
-
-""""""""""""""Settings and bindings for CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so     " Linux/MacOSX
-
-"Set Alt-R as open recent edited files
-nnoremap <silent> <A-r> :CtrlPMRU<CR>
-inoremap <silent> <A-r> <C-O>:CtrlPMRU<CR>
-vnoremap <silent> <A-r> <C-C>:CtrlPMRU<CR>
-
-"Set Alt-D as open recent edited files
-nnoremap <silent> <A-d> :CtrlPBuffer<CR>
-inoremap <silent> <A-d> <C-O>:CtrlPBuffer<CR>
-vnoremap <silent> <A-d> <C-C>:CtrlPBuffer<CR>
-
-"Set Alt-O as open recent edited files
-nnoremap <silent> <A-o> :FufFile<CR>
-inoremap <silent> <A-o> <ESC>:FufFile<CR>
-vnoremap <silent> <A-o> <C-C>:FufFile<CR>
 
 " Change the leader key
 let mapleader = ","
@@ -145,33 +116,94 @@ set ruler			"show the ruler at the right botton corner
 set hlsearch		"highlight the search results
 nnoremap <leader><space> :noh<CR>
 
+
+"enable the alt key mapping in normal terminal found this at 
+"http://stackoverflow.com/questions/6778961/alt-key-shortcuts-not-working-on-gnome-terminal-with-vim"
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
+
+
+"Enable windows copy/cut/paste and selection
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
+" Use CTRL-S for saving, also in Insert mode
+noremap <C-S>		:update<CR>
+vnoremap <C-S>		<C-C>:update<CR>
+inoremap <C-S>		<C-O>:update<CR>
+
+"CTRL-W is close current buffer
+noremap <C-w>		:bd<CR>
+vnoremap <C-w>		<C-C>:bd<CR>
+inoremap <C-w>		<C-O>:bd<CR>
+
+"Ctrl-q to quite vim
+noremap <C-q>		:q!<CR>
+vnoremap <C-q>		<C-C>:q!<CR>
+inoremap <C-q>		<C-O>:q!<CR>
+
+"CTRL-Z is Undo; not in cmdline though
+noremap <C-Z> u
+inoremap <C-Z> <C-O>u
+
+"CTRL-Y is Redo (although not repeat); not in cmdline though
+noremap <C-Y> <C-R>
+inoremap <C-Y> <C-O><C-R>
+
+"CTRL-V and SHIFT-Insert are Paste
+noremap <C-V>		"+gP
+inoremap <C-V>		<C-O>"+gp
+vnoremap <C-V>		"+gp
+
+"CTRL-C and SHIFT-Insert are Paste
+noremap <C-C>		"+y
+inoremap <C-C>		<C-O>"+y
+vnoremap <C-C>		"+y
+
+"CTRL-F4 is Close window
+noremap <C-F4> <C-W>c
+inoremap <C-F4> <C-O><C-W>c
+cnoremap <C-F4> <C-C><C-W>c
+onoremap <C-F4> <C-C><C-W>c
+
+
+"CTRL-A is Select all
+"noremap <C-A> gggH<C-O>G
+"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+"cnoremap <C-A> <C-C>gggH<C-O>G
+"onoremap <C-A> <C-C>gggH<C-O>G
+"snoremap <C-A> <C-C>gggH<C-O>G
+"xnoremap <C-A> <C-C>ggVG
+
+
+"Set Alt-R as open recent edited files
+nnoremap <silent> <A-r> :CtrlPMRU<CR>
+inoremap <silent> <A-r> <C-O>:CtrlPMRU<CR>
+vnoremap <silent> <A-r> <C-C>:CtrlPMRU<CR>
+
+"Set Alt-D as open recent edited files
+nnoremap <silent> <A-d> :CtrlPBuffer<CR>
+inoremap <silent> <A-d> <C-O>:CtrlPBuffer<CR>
+vnoremap <silent> <A-d> <C-C>:CtrlPBuffer<CR>
+
+"Set Alt-O as open recent edited files
+nnoremap <silent> <A-o> :FufFile<CR>
+inoremap <silent> <A-o> <ESC>:FufFile<CR>
+vnoremap <silent> <A-o> <C-C>:FufFile<CR>
+
+
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 "nnoremap <tab> %
 "vnoremap <tab> %
 
-"indent setting
-set autoindent		"inherit the indent of previous line
-set smartindent	
-set cindent			"use c-style indent
-
-set expandtab
-set smarttab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
-set showmode
-set confirm			"prompt message when processing unsaved or readonly file
-
-"turn off backup
-set nobackup
-set nowb
-set noswapfile
-
-
 "minibuffer handling
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplMapWindowNavArrows = 1
 
 "Customized hotkey setup
 nnoremap <silent> <F12> :A<CR>
@@ -201,38 +233,6 @@ inoremap <silent> <A-DOWN> <C-O>:cn<CR>
 nnoremap <silent> <A-UP> :cp<CR>
 inoremap <silent> <A-UP> <C-O>:cp<CR>
 
-" Map alt+ikjl as up/down/left/right for insert and normal mode
-inoremap <silent> <A-i> <UP>
-nnoremap <silent> <A-i> <UP>
-inoremap <silent> <A-k> <DOWN>
-nnoremap <silent> <A-k> <DOWN>
-inoremap <silent> <A-j> <LEFT>
-nnoremap <silent> <A-j> <LEFT>
-inoremap <silent> <A-l> <RIGHT>
-nnoremap <silent> <A-l> <RIGHT>
-
-"map end of line, beginning of line
-nnoremap <silent> <C-j> 0
-inoremap <silent> <C-j> <C-\><C-O>0
-vnoremap <silent> <C-j> 0
-
-" delete current line
-nnoremap <silent> <C-d> dd
-inoremap <silent> <C-d> <C-\><C-O>dd
-vnoremap <silent> <C-d> dd
-
-nnoremap <silent> <C-l> $
-inoremap <silent> <C-l> <C-\><C-O>$
-vnoremap <silent> <C-l> $
-
-"customized page up and down
-nnoremap <silent> <C-I> <C-U><C-U>
-vnoremap <silent> <C-I> <C-U><C-U>
-inoremap <silent> <C-I> <C-\><C-O><C-U><C-\><C-O><C-U>
-
-nnoremap <silent> <C-K> <C-D><C-D>
-vnoremap <silent> <C-K> <C-D><C-D>
-inoremap <silent> <C-K> <C-\><C-O><C-D><C-\><C-O><C-D>
 
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_open_multi = '1t'
