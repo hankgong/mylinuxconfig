@@ -6,7 +6,7 @@ set hidden
 
 "lists of all installed packages
 "--ack.vim: ack-grep, a powerful searching tool to replace grep. 
-"  **F3 is bound to search with ack-grep
+"|---F3 is bound to search with ack-grep
 "--a.vim: used to search between source code and header file
 "--bufkill: delete a buffer, don't know why vim doesn't provide this
 "--ctrlp.vim: powerful tool that can list buffers, recent files and search directories
@@ -21,11 +21,22 @@ set hidden
 
 "color customized settings
 hi PmenuSel ctermbg=darkcyan
+" with highlight current line in different modes
+highlight OverLength ctermbg=darkblue ctermfg=white guibg=#592929
+match OverLength /\%101v.\+/
+
+hi CursorLine   cterm=NONE ctermbg=black  guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=black  guibg=darkred guifg=white
+
+"autocmd InsertEnter,InsertLeave * set cul!
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set cul!
+
 
 "supertab settisfds; wondering why the default key mapping is reversed
-let g:SuperTabMappingForward = '<s-tab>'
-let g:SuperTabMappingBackward = '<tab>'
-let g:SuperTabMappingLiteral = '<c-t>'
+"let g:SuperTabMappingForward = '<s-tab>'
+"let g:SuperTabMappingBackward = '<tab>'
+"let g:SuperTabMappingLiteral = '<c-t>'
 
 
 "ctrlp.vim settings 
@@ -254,16 +265,7 @@ vnoremap <silent> <f4> <C-C>:cclose<CR>
 
 autocmd! bufwritepost .vimrc source %
 
-" with highlight current line in different modes
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%101v.\+/
 
-hi CursorLine   cterm=NONE ctermbg=black  guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=black  guibg=darkred guifg=white
-
-"autocmd InsertEnter,InsertLeave * set cul!
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set cul!
 
 "Error handling
 nnoremap <silent> <A-u> :cn<CR>
