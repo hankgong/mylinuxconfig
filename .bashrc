@@ -88,6 +88,8 @@ alias sss='screen /dev/ttyUSB0 115200'
 alias gb='git branch'
 alias gba='git branch -a'
 alias g='git status'
+# setting for tmux to achieve the same color scheme in a separate terminal
+alias tmux='TERM=screen-256color-bce tmux'
 
 
 export PATH=$PATH:/home/hgong/Programs/exec:/opt/freescale/usr/local/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/bin/

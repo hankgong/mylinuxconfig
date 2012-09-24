@@ -37,3 +37,12 @@ rm -rf vim-repeat
 git clone https://github.com/tpope/vim-repeat.git
 rm -rf vim-repeat/.git
 rm vim-repeat/.gitignore
+
+if [ -f /usr/bin/hg ]; then
+    rm -rf vim-autocomplpop
+    hg clone https://bitbucket.org/ns9tks/vim-autocomplpop
+    rm -rf vim-autocomplpop/.hg
+    rm -f vim-autocomplpop/.hgtags
+fi
+
+

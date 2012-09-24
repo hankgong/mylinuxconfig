@@ -4,11 +4,41 @@
 call pathogen#infect()
 set hidden
 
+"lists of all installed packages
+"--ack.vim: ack-grep, a powerful searching tool to replace grep. 
+"  **F3 is bound to search with ack-grep
+"--a.vim: used to search between source code and header file
+"--bufkill: delete a buffer, don't know why vim doesn't provide this
+"--ctrlp.vim: powerful tool that can list buffers, recent files and search directories
+"--c.vim: main c plugin for c programming
+"
+
+
+"For now, I'm just using the 
+"colorscheme ir_black
+"colorscheme molokai
+"let g:molokai_original = 1
+
+"color customized settings
+hi PmenuSel ctermbg=darkcyan
+
+"supertab settisfds; wondering why the default key mapping is reversed
+let g:SuperTabMappingForward = '<s-tab>'
+let g:SuperTabMappingBackward = '<tab>'
+let g:SuperTabMappingLiteral = '<c-t>'
+
+
+"ctrlp.vim settings 
+let g:ctrlp_show_hidden = 1
+
+"vim-autocomplpop settings
+"let g:acp_mappingDriven = 0
+let g:acp_behaviorKeywordLength = 4
+"let g:acp_completeoptPreview = 1
 
 "Font setting
 set gfn=Monospace\ 9
 "autocmd BufEnter * :syntax sync fromstart
-
 
 "Ctags configuration
 set tags=tags;
@@ -55,29 +85,33 @@ nnoremap <silent> <A-j> <LEFT>
 inoremap <silent> <A-l> <RIGHT>
 nnoremap <silent> <A-l> <RIGHT>
 
-"map end of line, beginning of line
-nnoremap <silent> <C-j> 0
-inoremap <silent> <C-j> <C-\><C-O>0
-vnoremap <silent> <C-j> 0
-
 " delete current line
 nnoremap <silent> <C-d> dd
-inoremap <silent> <C-d> <C-\><C-O>dd
+inoremap <silent> <C-d> <C-O>dd
 vnoremap <silent> <C-d> dd
+
+"map end of line, beginning of line
+nnoremap <silent> <C-j> 0
+inoremap <silent> <C-j> <C-O>0
+vnoremap <silent> <C-j> 0
 
 nnoremap <silent> <C-l> $
 inoremap <silent> <C-l> <C-\><C-O>$
 vnoremap <silent> <C-l> $
 
 "customized page up and down
-nnoremap <silent> <C-I> <C-U><C-U>
-vnoremap <silent> <C-I> <C-U><C-U>
-inoremap <silent> <C-I> <C-\><C-O><C-U><C-\><C-O><C-U>
+"nnoremap <silent> <C-I> <C-U><C-U>
+"vnoremap <silent> <C-I> <C-U><C-U>
+"inoremap <silent> <C-I> <C-\><C-O><C-U><C-\><C-O><C-U>
 
-nnoremap <silent> <C-K> <C-D><C-D>
-vnoremap <silent> <C-K> <C-D><C-D>
-inoremap <silent> <C-K> <C-\><C-O><C-D><C-\><C-O><C-D>
+"nnoremap <silent> <C-K> <C-D><C-D>
+"vnoremap <silent> <C-K> <C-D><C-D>
+"inoremap <silent> <C-K> <C-\><C-O><C-D><C-\><C-O><C-D>
 
+"search use ack-grep
+nnoremap <f3> :Ack<SPACE>
+inoremap <f3> <C-O>:Ack<SPACE>
+vnoremap <f3> <C-C>:Ack<SPACE>
 
 " Change the leader key
 let mapleader = ","
@@ -128,7 +162,6 @@ endw
 
 set timeout ttimeoutlen=50
 
-
 "Enable windows copy/cut/paste and selection
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
@@ -172,21 +205,14 @@ cnoremap <C-F4> <C-C><C-W>c
 onoremap <C-F4> <C-C><C-W>c
 
 
-"CTRL-A is Select all
-"noremap <C-A> gggH<C-O>G
-"inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-"cnoremap <C-A> <C-C>gggH<C-O>G
-"onoremap <C-A> <C-C>gggH<C-O>G
-"snoremap <C-A> <C-C>gggH<C-O>G
-"xnoremap <C-A> <C-C>ggVG
-
-
+"configure the ctrlp plugin
+let g:ctrlp_map = '<f8>'
 "Set Alt-R as open recent edited files
 nnoremap <silent> <A-r> :CtrlPMRU<CR>
 inoremap <silent> <A-r> <C-O>:CtrlPMRU<CR>
 vnoremap <silent> <A-r> <C-C>:CtrlPMRU<CR>
 
-"Set Alt-D as open recent edited files
+"Set Alt-D as showing all opened buffers
 nnoremap <silent> <A-d> :CtrlPBuffer<CR>
 inoremap <silent> <A-d> <C-O>:CtrlPBuffer<CR>
 vnoremap <silent> <A-d> <C-C>:CtrlPBuffer<CR>
@@ -217,21 +243,33 @@ vnoremap <silent> <C-\> <C-C>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q 
 set tags+=~/Programs/library/cpp
 
 " compile current project
-nnoremap <silent> <f5> :cd ../build<CR>:make<CR> 
-inoremap <silent> <f5> <ESC>:cd ../build<CR>:make<CR>a
-vnoremap <silent> <f5> <C-C>:cd ../build<CR>:make<CR>
+"nnoremap <silent> <f5> :cd ../build<CR>:make<CR> 
+"inoremap <silent> <f5> <ESC>:cd ../build<CR>:make<CR>a
+"vnoremap <silent> <f5> <C-C>:cd ../build<CR>:make<CR>
 
+" set f4 as close quickfix window
+nnoremap <silent> <f4> :cclose<CR> 
+inoremap <silent> <f4> <C-O>:cclose<CR>
+vnoremap <silent> <f4> <C-C>:cclose<CR>
 
 autocmd! bufwritepost .vimrc source %
 
 " with highlight current line in different modes
-autocmd InsertEnter,InsertLeave * set cul!
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%101v.\+/
+
+hi CursorLine   cterm=NONE ctermbg=black  guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=black  guibg=darkred guifg=white
+
+"autocmd InsertEnter,InsertLeave * set cul!
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set cul!
 
 "Error handling
-nnoremap <silent> <A-DOWN> :cn<CR>
-inoremap <silent> <A-DOWN> <C-O>:cn<CR>
-nnoremap <silent> <A-UP> :cp<CR>
-inoremap <silent> <A-UP> <C-O>:cp<CR>
+nnoremap <silent> <A-u> :cn<CR>
+inoremap <silent> <A-u> <C-O>:cn<CR>
+nnoremap <silent> <A-y> :cp<CR>
+inoremap <silent> <A-y> <C-O>:cp<CR>
 
 
 let g:ctrlp_open_new_file = 't'
